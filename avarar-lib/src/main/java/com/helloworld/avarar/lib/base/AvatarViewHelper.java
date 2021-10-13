@@ -205,8 +205,9 @@ public class AvatarViewHelper {
 
         String cookie = NetworkUtil.generateCookie(params);
 
-        Headers headers = new LazyHeaders.Builder().addHeader("Cookie", cookie).build();
-        WMGlideUrl url = new WMGlideUrl(networkIcon, headers);
+        // 如果需要，可以添加cookie
+        // Headers headers = new LazyHeaders.Builder().addHeader("Cookie", cookie).build();
+        WMGlideUrl url = new WMGlideUrl(networkIcon);
         WMRequestListener listener = new WMRequestListener<WMGlideUrl,Bitmap>(){
             @Override
             public boolean onException(Exception e, WMGlideUrl model, Target<Bitmap> target, boolean isFirstResource) {
