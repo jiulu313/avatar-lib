@@ -74,7 +74,7 @@ public class AvatarViewHelper {
         return this;
     }
 
-    public AvatarViewHelper resourece(int resourceId){
+    public AvatarViewHelper resource(int resourceId){
         Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), resourceId, null);
         this.bitmap = bitmap;
         return this;
